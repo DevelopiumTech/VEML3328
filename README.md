@@ -4,6 +4,10 @@ An arduino library for Vishay VEML3328 and VEML3328sl RGBCIR Color Sensor
 ![VEML3328sl chip](extras/sensor.jpg)
 
 Please refer to the datasheet for additional information https://www.vishay.com/docs/84968/veml3328.pdf
+# Wiring
+The sensor communicates with the host microcontroller through I2C communication and it has 4 pins, VCC, GND, SCL and SDA. The supply voltage should not exceed 3.6V and the I2C lines should be pulled up to VCC through 2.2K resistors as shown in the diagram below:
+
+![Wiring diagram](extras/Wiring.jpg)
 
 # Installation
 Download the library as .zip and add it to [Arduino IDE](http://www.arduino.cc/en/main/software) via:
