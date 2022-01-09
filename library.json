@@ -1,0 +1,20 @@
+{
+    "name": "VEML3328",
+    "version": "0.0.1",
+	"description": "Vishay VEML3328 RGBCIR library on Arduino with Gain, sensitivity and integration time adjustment",
+	"keywords": "color sensor, rgb, IR, Clear",
+    "repository":
+    {
+        "type": "git",
+        "url": "https://github.com/DevelopiumTech/VEML3328"
+    },
+    "authors":
+    {
+        "name": "Ahmed Albagdady",
+        "email": "ahmad.elbaghdadi46@gmail.com",
+        "maintainer": true
+    },
+    "license": "MIT",
+    "frameworks": "*",
+    "platforms": "*"
+}

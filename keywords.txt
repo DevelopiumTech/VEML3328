@@ -1,0 +1,39 @@
+#######################################
+# Syntax Coloring Map
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+VEML3328	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+getRed	KEYWORD2
+getGreen	KEYWORD2
+getBlue	KEYWORD2
+getClear	KEYWORD2
+getCommandReg	KEYWORD2
+getIR	KEYWORD2
+getClear	KEYWORD2
+setSensitivity	KEYWORD2
+setGain	KEYWORD2
+setDG	KEYWORD2
+setIntegrationTime	KEYWORD2
+Enable	KEYWORD2
+Disable	KEYWORD2
+setConfiguration	KEYWORD2
+
+######################################
+# Constants (LITERAL1)
+#######################################
+IT_50MS	LITERAL1
+IT_100MS	LITERAL1
+IT_200MS	LITERAL1
+IT_400MS	LITERAL1
+
+
+low_sens	LITERAL1
+high_sens	LITERAL1
