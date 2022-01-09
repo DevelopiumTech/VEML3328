@@ -1,4 +1,4 @@
-# VEML3328
+# VEML3328 ![Version](https://img.shields.io/badge/Version-v0.0.1-green.svg)
 An arduino library for Vishay VEML3328 and VEML3328sl RGBCIR Color Sensor
 
 ![VEML3328sl chip](extras/sensor.jpg)
