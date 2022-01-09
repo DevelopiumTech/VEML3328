@@ -1,8 +1,8 @@
 /*
 
-The MIT License (MIT)
+MIT License
 
-Copyright (c) 2015 amb93
+Copyright (c) 2022 Developium
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -99,7 +99,7 @@ uint16_t VEML3328::getCommandReg(void) {
 
 void VEML3328::Enable(void) {
   uint16_t CommandReg;
-  CommandReg = read(COMMAND_CODE_CONF);
+  CommandReg = read(COMMAND_CODE_CONF);						//read the content of the command register to updated it
   CommandReg = CommandReg&(VEML3328_SD0_DISABLE^0xFFFF);			//reset SD0 and SD1 bit to 0
   CommandReg = CommandReg&(VEML3328_SD1_DISABLE^0xFFFF);			//reset SD0 and SD1 bit to 0
  
