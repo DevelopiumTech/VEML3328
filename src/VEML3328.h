@@ -87,26 +87,25 @@ SOFTWARE.
 class VEML3328 {
 	
   private: 
-    uint16_t read(uint8_t);
-    uint8_t lastConfiguration;
+	uint16_t read(uint8_t);
+	uint8_t lastConfiguration;
 	void setConfiguration(uint16_t);
 	
   public:
-    VEML3328(void);
-    bool begin(void);
+	VEML3328(void);
+	bool begin(void);
 	void Enable(void);
 	void Disable(void);
-    uint16_t getRed(void);
-    uint16_t getGreen(void);
-    uint16_t getBlue(void);
-    uint16_t getClear(void);
+	uint16_t getRed(void);
+	uint16_t getGreen(void);
+	uint16_t getBlue(void);
+	uint16_t getClear(void);
 	uint16_t getIR(void);
 	void setSensitivity(bool);
 	void setGain(float);
 	void setDG(uint8_t);
 	void setIntegrationTime(uint16_t);
 	uint16_t getCommandReg(void);
-
 };
 
 #endif
