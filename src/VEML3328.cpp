@@ -125,11 +125,11 @@ void VEML3328::setSensitivity(bool sens) {
   
   if (sens == 1)
   {
-	  CommandReg = CommandReg^VEML3328_SENSITIVITY_0;
+	  CommandReg = CommandReg^VEML3328_SENSITIVITY_1;
   }
   else if (sens == 0)
   {
-	  CommandReg = CommandReg^VEML3328_SENSITIVITY_1;
+	  CommandReg = CommandReg^VEML3328_SENSITIVITY_0;
   }
   
   setConfiguration(CommandReg);
