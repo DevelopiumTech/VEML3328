@@ -45,35 +45,41 @@ SOFTWARE.
 #include "Wire.h"
 #include "VEML3328.h"
 
-VEML3328 RGBCIR;
+VEML3328 RGBCIR;  //give the sensor a name, RGBCIR seems convienient as it reflects the function of the sensor
 
 void setup() {
+
   Serial.begin(9600);
   Wire.begin(); 
-  if(!RGBCIR.begin()) {
-    Serial.println("ERROR: couldn't detect the sensor");
-    while(1){}
+  if(!RGBCIR.begin()) {                                   //chekc if the sensor is connected 
+    Serial.println("ERROR: couldn't detect the sensor"); //display an error message if the sensor is not connected
+    while(1){}            
   }
   Serial.println("Vishay VEML3328 RGBCIR color sensor");
-  RGBCIR.Enable(); 
-  RGBCIR.setGain(0.5);
-  RGBCIR.setSensitivity(high_sens);
-  RGBCIR.setDG(4);
-  RGBCIR.setIntegrationTime(IT_400MS);
+  RGBCIR.Enable();                    //enable the sensor channels
+  RGBCIR.setGain(4);                  //set the amplification gain to 4 (0.5,1,2 can also be selected)
+  RGBCIR.setSensitivity(high_sens);   //set the sensitivity mode (low_sens can also be selected) 
+  RGBCIR.setDG(4);                    //set the digital gain (1,2 can also be selected)
+  RGBCIR.setIntegrationTime(IT_50MS); //set the sensor's integration time or the time it takes to take one measurement (IT_100MS, IT_200MS, IT_400MS can also be selected)
 
   delay(1000);
 }
 
 void loop() {
   // Use the arduino's serial plotter
+  Serial.print("Blue:");
   Serial.print(RGBCIR.getBlue());   //read blue channel
   Serial.print(','); 
+  Serial.print("Red:");
   Serial.print(RGBCIR.getRed());    //read red channel
   Serial.print(',');  
+  Serial.print("Green:");
   Serial.print(RGBCIR.getGreen());  //read green channel
   Serial.print(',');  
+  Serial.print("Clear:");
   Serial.print(RGBCIR.getClear());  //read clear channel
   Serial.print(',');  
+  Serial.print("IR:");
   Serial.println(RGBCIR.getIR());   //read IR channel
   delay(100);
 }
