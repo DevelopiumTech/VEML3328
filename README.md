@@ -25,10 +25,10 @@ RGBCIR.Disable(); //Turn off the sensor'channels (off by default)
 ```
  ## Parameters configurations:
  ```
- setSensitivity(); //toggle between two sensitivity modes; low_sens for low sensitivity and high_sens for high
- setGain(); //sets the gain of the sensor, choose between 0.5, 1, 2, 4 (1 default)
- setDG(); //set the digital gain of the sensor, choose between 1, 2, 4 (1 default)
- setIntegrationTime(); //set the integration time of the sensor, choose between IT_50MS, IT_100MS, IT_200MS, IT_400MS (in milliseconds)
+ setSensitivity(n); //toggle between two sensitivity modes; low_sens for low sensitivity and high_sens for high
+ setGain(n); //sets the gain of the sensor, choose between 0.5, 1, 2, 4 (1 default)
+ setDG(n); //set the digital gain of the sensor, choose between 1, 2, 4 (1 default)
+ setIntegrationTime(n); //set the integration time of the sensor, choose between IT_50MS, IT_100MS, IT_200MS, IT_400MS (in milliseconds)
   ```
 ## Reading the color channels from sensor:
 ```
